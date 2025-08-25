@@ -19,7 +19,6 @@ def verify_vpn_country(expected_country):
         raise RuntimeError(f"⚠️ VPN check failed: {e}")
 
 
-# countryList=["TH","KR","AE","ZA","UY","CR","BR","VN","TW","BD","KZ","MA","NZ","AR"]  
 def main():
     start_time = time.time()
     country = os.environ.get("COUNTRY", "US").upper()
