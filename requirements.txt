@@ -1,0 +1,9 @@
+requests
+playwright
+requests
+matplotlib
+dnspython
+tqdm
+tabulate
+idna
+cryptography

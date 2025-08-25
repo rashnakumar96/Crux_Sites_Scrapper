@@ -1,0 +1,34 @@
+version: '3.8'
+
+
+services:
+  nordvpn:
+    image: bubuntux/nordvpn
+    container_name: nordvpn_cruxscraper
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - TOKEN=${NORDVPN_TOKEN}
+      - CONNECT=${VPN_COUNTRY}
+      - TECHNOLOGY=NORDLYNX
+      - LAN_NETWORK=172.21.0.0/16
+
+    networks:
+      - vpn_net
+    restart: unless-stopped
+
+  har-capture:
+    build: .
+    container_name: har-capture_cruxscraper
+    depends_on:
+      - nordvpn
+    network_mode: "service:nordvpn"
+    environment:
+      - COUNTRY=${VPN_COUNTRY}
+    volumes:
+      - ./data:/app/data
+    entrypoint: ["python", "scripts/run_country.py"]
+
+networks:
+  vpn_net:
+    driver: bridge
