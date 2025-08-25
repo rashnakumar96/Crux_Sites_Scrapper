@@ -1,3 +1,10 @@
+## Prerequisites
+
+1. Docker and Docker Compose installed.
+2. A NordVPN token with a valid subscription. Add your NordVPN token in collect_resources.sh
+3. Python 3.x if you plan to run any helper scripts outside Docker.
+
+
 # HAR Capture & Resource Collection
 
 This repository provides tools to collect HAR files of websites and extract their resources for analysis.
