@@ -24,10 +24,11 @@ where CC is the ISO country code (e.g., US, IN, FR).
 
 ## How It Works
 
-- Reads the top 1,000 CrUX sites for the specified country from the **cached file**:
+- Connects to **NordVPN** using the provided country code (`CC`).
+
+- Fetches the top 1,000 CrUX sites for the specified country from the **cached file**:
 `data/top_sites_per_country.json`
 
-- Connects to **NordVPN** using the provided country code (`CC`).
 
 - Collects HAR (HTTP Archive) files for each site and stores them in:  
   `data/har_files/CC/`
