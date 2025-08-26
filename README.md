@@ -5,7 +5,7 @@ This repository provides tools to collect HAR files of websites and extract thei
 
 ## Prerequisites
 
-1. Docker and Docker Compose installed.
+1. Docker installed.
 2. A NordVPN token with a valid subscription. Add your NordVPN token in `collect_resources.sh`:
 
    ```bash
