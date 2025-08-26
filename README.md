@@ -12,8 +12,7 @@ This repository provides tools to collect HAR files of websites and extract thei
    # inside collect_resources.sh
    NORDVPN_TOKEN="your_token_here"
 
-3. Python 3.x if you plan to run any helper scripts outside Docker.
-
+---
 
 ## Usage
 
