@@ -43,3 +43,16 @@ where CC is the ISO country code (e.g., US, IN, FR).
 
   This file is structured **per CrUX site**, mapping each site to the list of resources observed.
 
+---
+
+## Output Structure
+
+```text
+data/
+├── top_sites_per_country.json     # cached top-1k sites per country
+├── har_files/                     # HAR captures grouped by country
+│   └── CC/
+└── resources/                     # extracted resources per CrUX site
+    └── CC_resources.json
+
+
